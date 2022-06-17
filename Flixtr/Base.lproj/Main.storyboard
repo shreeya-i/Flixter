@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TMp-QD-44z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wQW-z2-iod">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -84,9 +84,10 @@
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <color key="highlightedColor" systemColor="systemBackgroundColor"/>
                             </label>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ihi-dP-Qr1">
+                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="Ihi-dP-Qr1">
                                 <rect key="frame" x="0.0" y="102" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" systemColor="systemBackgroundColor"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                         </subviews>
@@ -105,10 +106,67 @@
             </objects>
             <point key="canvasLocation" x="37.681159420289859" y="95.758928571428569"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="6r2-k2-Yhm">
+            <objects>
+                <viewController id="wQW-z2-iod" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A4s-Jg-rzE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_image" translatesAutoresizingMaskIntoConstraints="NO" id="tmQ-Ry-gr8">
+                                <rect key="frame" x="138" y="378.5" width="138" height="139"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flixter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SqC-iY-9Hn">
+                                <rect key="frame" x="146" y="274" width="122.5" height="48"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                                <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1m3-Qd-RcG">
+                                <rect key="frame" x="132" y="590" width="150.5" height="30.5"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <color key="tintColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Find my next Flix &gt;"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Find my next Flix &gt;">
+                                            <attributes>
+                                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="TMp-QD-44z" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="9gZ-iw-NqL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4L5-yA-mkx"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <color key="tintColor" systemColor="systemGray2Color"/>
+                        <constraints>
+                            <constraint firstItem="1m3-Qd-RcG" firstAttribute="centerX" secondItem="A4s-Jg-rzE" secondAttribute="centerX" id="aud-lr-GNX"/>
+                            <constraint firstItem="SqC-iY-9Hn" firstAttribute="centerX" secondItem="A4s-Jg-rzE" secondAttribute="centerX" id="gPu-Jn-8Fz"/>
+                            <constraint firstItem="1m3-Qd-RcG" firstAttribute="top" secondItem="tmQ-Ry-gr8" secondAttribute="bottom" constant="72.5" id="hxg-8s-VDF"/>
+                            <constraint firstItem="tmQ-Ry-gr8" firstAttribute="centerX" secondItem="A4s-Jg-rzE" secondAttribute="centerX" id="k2v-JU-lfF"/>
+                            <constraint firstItem="tmQ-Ry-gr8" firstAttribute="top" secondItem="SqC-iY-9Hn" secondAttribute="bottom" constant="56.5" id="kkH-Oy-woB"/>
+                            <constraint firstItem="tmQ-Ry-gr8" firstAttribute="centerY" secondItem="A4s-Jg-rzE" secondAttribute="centerY" id="wa1-2C-L6b"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aXN-jd-2i2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-639.13043478260875" y="-612.05357142857144"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="OR9-JB-nx4">
             <objects>
                 <tabBarController id="TMp-QD-44z" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="2ID-Ya-XRO"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gSh-VA-DbE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -165,9 +223,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Plot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3dZ-Dr-tXO">
-                                <rect key="frame" x="52" y="538" width="38" height="24"/>
+                                <rect key="frame" x="52" y="538" width="41" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -244,7 +302,9 @@
                         <viewLayoutGuide key="safeArea" id="Lm7-kW-X5Z"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Movies" id="ubf-ol-H44"/>
+                    <tabBarItem key="tabBarItem" title="Movies" id="ubf-ol-H44">
+                        <color key="badgeColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="GridCollectionView" destination="gsi-wb-tHb" id="71H-DI-ddu"/>
                         <outlet property="GridCollectionViewFlowLayout" destination="dex-me-KJl" id="5Nb-re-cdQ"/>
@@ -289,6 +349,7 @@
         <segue reference="pV3-w4-a5K"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="launch_image" width="138" height="139"/>
         <image name="play.circle" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -296,8 +357,14 @@
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
