@@ -10,6 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DetailsViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIButton *playButton;
 @property (weak, nonatomic) IBOutlet UILabel *dateDetail;
 @property (weak, nonatomic) IBOutlet UILabel *titleDetail;
 @property (weak, nonatomic) IBOutlet UILabel *synopsisDetail;

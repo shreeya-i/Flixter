@@ -22,6 +22,8 @@
 		6E571F75285BD8F000725715 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E571F74285BD8F000725715 /* DetailsViewController.m */; };
 		6E571F78285BE75000725715 /* GridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E571F77285BE75000725715 /* GridViewController.m */; };
 		6E571F7B285BE9C400725715 /* GridCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E571F7A285BE9C400725715 /* GridCollectionViewCell.m */; };
+		6E571F7E285D03EF00725715 /* TrailerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E571F7D285D03EF00725715 /* TrailerViewController.m */; };
+		6E571F80285D047800725715 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E571F7F285D047800725715 /* WebKit.framework */; };
 		8207DE429CC7CF814C9BB299 /* Pods_Flixtr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77E49C05A46EF161440B421F /* Pods_Flixtr.framework */; };
 		E1EA45E48FCA9AF74E84BD8D /* Pods_Flixtr_FlixtrUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5763EC6C46065EDF4638CC3A /* Pods_Flixtr_FlixtrUITests.framework */; };
 /* End PBXBuildFile section */
@@ -76,6 +78,9 @@
 		6E571F77285BE75000725715 /* GridViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GridViewController.m; sourceTree = "<group>"; };
 		6E571F79285BE9C400725715 /* GridCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GridCollectionViewCell.h; sourceTree = "<group>"; };
 		6E571F7A285BE9C400725715 /* GridCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GridCollectionViewCell.m; sourceTree = "<group>"; };
+		6E571F7C285D03EF00725715 /* TrailerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrailerViewController.h; sourceTree = "<group>"; };
+		6E571F7D285D03EF00725715 /* TrailerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrailerViewController.m; sourceTree = "<group>"; };
+		6E571F7F285D047800725715 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		77E49C05A46EF161440B421F /* Pods_Flixtr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flixtr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEAA73404361BD231B5F6A31 /* Pods-Flixtr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flixtr.release.xcconfig"; path = "Target Support Files/Pods-Flixtr/Pods-Flixtr.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E571F80285D047800725715 /* WebKit.framework in Frameworks */,
 				8207DE429CC7CF814C9BB299 /* Pods_Flixtr.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +144,8 @@
 				6E571EEE285B9BC000725715 /* SceneDelegate.h */,
 				6E571EEF285B9BC000725715 /* SceneDelegate.m */,
 				6E571EF4285B9BC000725715 /* Main.storyboard */,
+				6E571F7C285D03EF00725715 /* TrailerViewController.h */,
+				6E571F7D285D03EF00725715 /* TrailerViewController.m */,
 				6E571F79285BE9C400725715 /* GridCollectionViewCell.h */,
 				6E571F7A285BE9C400725715 /* GridCollectionViewCell.m */,
 				6E571F76285BE75000725715 /* GridViewController.h */,
@@ -189,6 +197,7 @@
 		9938F989D2C65855D8932AAC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6E571F7F285D047800725715 /* WebKit.framework */,
 				77E49C05A46EF161440B421F /* Pods_Flixtr.framework */,
 				5763EC6C46065EDF4638CC3A /* Pods_Flixtr_FlixtrUITests.framework */,
 				0B3F511277DFB969FC3FFC6D /* Pods_FlixtrTests.framework */,
@@ -441,6 +450,7 @@
 				6E571F78285BE75000725715 /* GridViewController.m in Sources */,
 				6E571F75285BD8F000725715 /* DetailsViewController.m in Sources */,
 				6E571F6F285BA71700725715 /* MovieTableViewCell.m in Sources */,
+				6E571F7E285D03EF00725715 /* TrailerViewController.m in Sources */,
 				6E571F22285B9BDC00725715 /* MovieViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

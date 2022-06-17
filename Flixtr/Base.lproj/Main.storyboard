@@ -171,6 +171,16 @@
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEe-RY-kw2">
+                                <rect key="frame" x="331" y="462" width="45" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="play.circle" catalog="system"/>
+                                <connections>
+                                    <segue destination="L6U-9s-7iW" kind="show" id="Z5k-nH-gNu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RJ9-ld-TiM"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
@@ -178,6 +188,7 @@
                     <navigationItem key="navigationItem" id="BIV-KK-O8x"/>
                     <connections>
                         <outlet property="dateDetail" destination="oPf-0I-AwI" id="iVG-tb-rb3"/>
+                        <outlet property="playButton" destination="uEe-RY-kw2" id="KpE-89-afI"/>
                         <outlet property="posterDetail" destination="WSM-aQ-bTJ" id="Yg7-cH-uFL"/>
                         <outlet property="synopsisDetail" destination="yMi-Jb-JC0" id="R2p-0P-02U"/>
                         <outlet property="titleDetail" destination="yVD-Wa-A1J" id="gvR-ha-hwu"/>
@@ -243,13 +254,47 @@
             </objects>
             <point key="canvasLocation" x="1557.9710144927537" y="95.758928571428569"/>
         </scene>
+        <!--Trailer View Controller-->
+        <scene sceneID="xSM-2w-P6l">
+            <objects>
+                <viewController id="L6U-9s-7iW" customClass="TrailerViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5U4-Qv-9dM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FvT-yL-UDK">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0KW-U0-Gl1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2Sl-Hh-1w5"/>
+                    <connections>
+                        <outlet property="webkitView" destination="FvT-yL-UDK" id="tPG-Be-PfV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hX4-gB-Ff3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="795.6521739130435" y="821.65178571428567"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="pV3-w4-a5K"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="play.circle" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

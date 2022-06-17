@@ -6,6 +6,7 @@
 //
 
 #import "DetailsViewController.h"
+#import "TrailerViewController.h"
 #import "UIImageView+AFNetworking.h"
 
 @interface DetailsViewController ()
@@ -30,14 +31,14 @@
     [_posterDetail addSubview:overlay];
 }
 
-/*
-#pragma mark - Navigation
+
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
+    NSDictionary *dataToPass = self.detailDict;
+    TrailerViewController *detailVC = [segue destinationViewController];
+    detailVC.detailDict = dataToPass;
 }
-*/
 
 @end
