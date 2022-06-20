@@ -30,7 +30,7 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 
 - One-time landing screen following the launch screen that directly connects to TabBarController with a button
-- Image constraints using Auto Layout
+- Object constraints using Auto Layout
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
