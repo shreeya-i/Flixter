@@ -49,7 +49,7 @@ GIF created with [Kap](https://getkap.co/).
 Describe any challenges encountered while building the app.
 
 XCode (when downloaded through the App Store) did not finish after waiting for 12 hours and got stuck on the installation screen. This was eventually resolved by installing through Apple Developer. 
-Twice, I got a file corrupting bug that made it impossible to continue with the project. The first time, I completely restarted Flixter. The second time, I caught that it was because I was attempting to use components in the private .m files instead of adding them to and importing .h files.
+Twice, I got a file corrupting bug that made it impossible to continue with the project. The first time, I completely restarted the Flixter project. The second time, I caught that it was because I was attempting to use components in the private .m files instead of adding them to and importing .h files.
 
 ## Credits
 
